@@ -1,0 +1,1 @@
+g++ main.cpp -std=c++11 -pthread  -I../websocketpp -I../asio/asio/include -o testWS

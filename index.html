@@ -1,0 +1,11 @@
+<script>
+var socket = new WebSocket("ws://localhost:9000");
+var numMessages=0;
+socket.onmessage=function(event){
+    console.log(event.data);
+    if(numMessages===0){
+        socket.send(JSON.stringify({yield:5}));
+    }
+    numMessages++;    
+}
+</script>
